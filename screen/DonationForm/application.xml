@@ -4,8 +4,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
 
-    <transition name="createCCOSApplication">
-        <service-call name="ExampleServices.create#CCOSApplication"/>
+    <transition name="transition">
+        <service-call name="donateServices.create#Person"/>
         <default-response url="."/>
     </transition>
 

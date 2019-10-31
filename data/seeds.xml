@@ -1,4 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <entity-facade-xml type="seed">
-    <tutorial.Tutorial tutorialId="TestOne" description="Test one description."/>
-    <tutorial.Tutorial tutorialId="TestTwo" description="Test two description."/>
+    <moqui.security.ArtifactGroup artifactGroupId="EMPLOYMENT_API"/>
+    <moqui.security.ArtifactAuthz userGroupId="ADMIN" authzActionEnumId="AUTHZA_ALL" artifactGroupId="EMPLOYMENT_API" authzTypeEnumId="AUTHZT_ALLOW"/>
+
+    <artifactGroups artifactGroupId="EMPLOYMENT_API">
+        <artifacts artifactName="component://DonationForm/screen/DonationForm/application*" artifactTypeEnumId="AT_XML_SCREEN_TRANS" inheritAuthz="Y" nameIsPattern="Y"/>
+        <artifacts artifactName="component://DonationForm/screen/DonationForm/application.xml" artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y" nameIsPattern="N"/>
+    </artifactGroups>
+
 </entity-facade-xml>

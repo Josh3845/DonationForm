@@ -96,9 +96,7 @@ main.main-content span.nowrap {
 	.splash-wrapper {
 		padding-bottom: 18.33% /* 220 dividied by 1200 */
 	}
-	.splash-wrapper .donate {
-		background-image: url('img/donate1200x220.jpg');
-	}
+	
  }
 
 footer.non-profit {
