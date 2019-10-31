@@ -21,9 +21,13 @@
                     <img src="/images/donate.jpg">
                 </div>
             </div>
+
+            <!--<form-single name="TheForm" transition="TheTransition" method="POST">-->
+
+        <form name="Person" transistion="transition" action="" method="POST">
             <main class="main-content">
                 <div id="payment-form">
-                    <form id="donationForm" class="stripe-form">
+                   
                         <fieldset class="amount">
                             <legend>Donation Amount</legend>
                             <img src="/images/100-secure.png" alt="100% Secure" class="seal">
@@ -66,7 +70,7 @@
                                 </div>
                                 <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
                                     <span class="other-radio-and-label">
-                                        <input type="radio" name="amount_prefilled" id="rdo-amount-other" value>
+                                        <input type="radio" name="acquireCost" id="rdo-amount-other" value>
                                         <label for="rdo-amount-other">$</label>
                                     </span>
                                     <input id="amount" class="other-input input" name="amount" type="tel" size="7" maxlength="7" pattern="\d+(\.\d{2})?" placeholder="other" onclick="selectOtherRadioButton()" data-value-missing="Please enter the amount you would like to give" data-pattern-mismatch="Please enter only number of dollars OR dollars and cents">
@@ -77,11 +81,11 @@
                             <div>   
                                 
                                 <br />                         
-                                <div class="donatealign2" class="justify-start">
+                                <div class="donatealign2">
                                     <input type="radio" name="monthly_or_one_time" id="one-time" value="one-time" checked="checked">
                                     <label for="one-time">One-Time Donation</label>
                                 </div>
-                                <div class="donatealign2" class="justify-end">
+                                <div class="donatealign2">
                                     <input type="radio" name="monthly_or_one_time" id="monthly" value="monthly">
                                     <label for="monthly">Monthly Donation</label>
                                 </div>
@@ -92,44 +96,44 @@
                             <div class="row row-flush flex-required">
                                 <div class="field col-9">
                                     <label for="example2-first_name" class="label-placeholder">First Name<sup>*</sup></label>
-                                    <input id="example2-first_name" name="first_name" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
+                                    <input id="example2-first_name" name="firstNameOnAccount" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
                                 </div>
                                 <div class="field col-3">
                                     <label for="example2-middle_initial" class="label-placeholder">M.I.<sup></sup></label>
-                                    <input id="example2-middle_initial" name="middle_initial" size="2" class="input no-placeholder" type="text" placeholder="M.I.">
+                                    <input id="example2-middle_initial" name="middleNameOnAccount" size="2" class="input no-placeholder" type="text" placeholder="M.I.">
                                 </div>
                                 <div class="field col-12">
                                     <label for="example2-last_name" class="label-placeholder">Last Name<sup>*</sup></label>
-                                    <input id="example2-last_name" name="last_name" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your Last Name" data-pattern-mismatch="Please re-enter your Last Name" placeholder="Last Name">
+                                    <input id="example2-last_name" name="lastNameOnAccount" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your Last Name" data-pattern-mismatch="Please re-enter your Last Name" placeholder="Last Name">
                                 </div>
                                 <div class="field col-12">
                                     <label for="email" class="label-placeholder">Email Address<sup>*</sup></label>
-                                    <input id="email" name="email" size="30" class="input no-placeholder" type="email" required data-value-missing="Please enter your Email Address" data-pattern-mismatch="Please enter a valid Email Address" placeholder="Email Address">
+                                    <input id="email" name="email" size="30" class="input no-placeholder" type="emailAddress" required data-value-missing="Please enter your Email Address" data-pattern-mismatch="Please enter a valid Email Address" placeholder="Email Address">
                                 </div>
                                 <div class="field col-12">
                                     <label for="phone" class="label-placeholder">Phone Number<sup>*</sup></label>
-                                    <input id="phone" name="phone" class="input no-placeholder" type="tel" required pattern="\d{3}[\-]{0,1}\d{3}[\-]{0,1}\d{4}" data-value-missing="Please enter 10-digit Phone Number" data-pattern-mismatch="Please enter 10-digit Phone Number" placeholder="Phone Number">
+                                    <input id="phone" name="contactNumber" class="input no-placeholder" type="tel" required pattern="\d{3}[\-]{0,1}\d{3}[\-]{0,1}\d{4}" data-value-missing="Please enter 10-digit Phone Number" data-pattern-mismatch="Please enter 10-digit Phone Number" placeholder="Phone Number">
                                 </div>
                                 <div class="field col-12 col-md-9">
                                     <label for="address_line1" class="label-placeholder">Residential Address<sup>*</sup></label>
-                                    <input id="address_line1" name="address_line1" size="30" class="input no-placeholder" type="text" required pattern=".{3,}" data-value-missing="Please enter your Address" data-pattern-mismatch="Please enter a valid Address" placeholder="Residential Address">
+                                    <input id="address_line1" name="address1" size="30" class="input no-placeholder" type="text" required pattern=".{3,}" data-value-missing="Please enter your Address" data-pattern-mismatch="Please enter a valid Address" placeholder="Residential Address">
                                 </div>
                                 <div class="field col-6 col-md-3">
                                     <label for="example2-address_line2" class="label-placeholder">Apt. #, Unit #
                             <sup></sup></label>
-                                    <input id="example2-address_line2" name="address_line2" class="input no-placeholder" type="text" placeholder="Apt. #, Unit #">
+                                    <input id="example2-address_line2" name="unitNumber" class="input no-placeholder" type="text" placeholder="Apt. #, Unit #">
                                 </div>
                                 <div class="field col-6 col-md-3">
                                     <label for="address_zip" class="label-placeholder">ZIP Code<sup>*</sup></label>
-                                    <input id="address_zip" class="input no-placeholder" name="address_zip" type="tel" pattern="[0-9]{5}" required data-value-missing="Please enter your ZIP Code" data-pattern-mismatch="Please enter a valid ZIP Code" placeholder="ZIP Code">
+                                    <input id="address_zip" class="input no-placeholder" name="postalCode" type="tel" pattern="[0-9]{5}" required data-value-missing="Please enter your ZIP Code" data-pattern-mismatch="Please enter a valid ZIP Code" placeholder="ZIP Code">
                                 </div>
                                 <div class="field col-12 col-md-6">
                                     <label for="address_city" class="label-placeholder">City<sup>*</sup></label>
-                                    <input id="address_city" class="input no-placeholder" name="address_city" type="text" required pattern=".{2,}" data-value-missing="Please enter your City" data-pattern-mismatch="Please enter a valid City" placeholder="City">
+                                    <input id="address_city" class="input no-placeholder" name="city" type="text" required pattern=".{2,}" data-value-missing="Please enter your City" data-pattern-mismatch="Please enter a valid City" placeholder="City">
                                 </div>
                                 <div class="field col-6 col-md-3">
                                     <label for="address_state" class="label-placeholder">State<sup>*</sup></label>
-                                    <select id="address_state" class="input no-placeholder" name="address_state" required data-value-missing="Please select your State">
+                                    <select id="address_state" class="input no-placeholder" name="stateProvinceGeold" required data-value-missing="Please select your State">
                                         <option class="blank label"></option>
                                         <option value="AL" class="state">Alabama</option>
                                         <option value="AK" class="state">Alaska</option>
@@ -200,30 +204,47 @@
                                 <p class="send-me-caption">Send me newsletters about <span class="nowrap">Guru Nanak Dwara.</span></p>
                             </label>
                         </fieldset>
-                        <fieldset class="card info">
-                            <legend>Card Information</legend>
-                            <div id="card-one-liner" class="stripe-input-wrapper"></div>
+
+            <fieldset class="card info">
+                <legend>Card Information</legend>
+                    <div id="card-one-liner" class="stripe-input-wrapper">
+                        <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                            <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardNumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Card number" aria-placeholder="Card number" aria-invalid="false" value="">
+                            <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                                <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="expireDate" inputmode="numeric" aria-label="Credit or debit card number" placeholder="exp 10/20" aria-placeholder="Card number" aria-invalid="false" value="">
+                                <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                                    <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardSecurityCode" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Security Code" aria-placeholder="Card number" aria-invalid="false" value="">
+                                    <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
+                                    </div>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+            
+                                                    
                             <div class="error" role="alert">
                                 <span class="message"></span>
                             </div>
-                            <button id="submit-button" type="submit">Submit Donation</button>
-                            <input type="hidden" id="redirectInput" name="redirect" value>
-                            <script>
-                    const currentURL = window.location.href.toString();
-                    let redirectURL = currentURL.replace('donate.html', 'donate-thankyou.html');
-                    document.getElementById('redirectInput').setAttribute('value', redirectURL);
-    
-                    $("form").submit(function () {
+
+
+                    <button id="submit-button" type="submit">Submit Donation</button>
+                    <input type="hidden" id="redirectInput" name="redirect" value>
+                    <script>
+                        $("form").submit(function () {
                         $("#submit-button").text('Thank You').prop('disabled', true);
                     });
-                </script>
-                        </fieldset>
-                    </form>
+                    </script>
+            </fieldset>
                 </div>
             </main>
+        </form>
+              
+    
             <footer class="non-profit">
                 <p>Guru Nanak Dwara is a tax-exempt 501c(3) non-profit charitable organization. Every generous donation is tax deductible in the USA.</p>
             </footer>
-            <script src="js/main.js"></script>
-            <script src="js/donate.js"></script>
+            
         </body>
+
+        <!--<script src="js/main.js"></script>
+            <script src="js/donate.js"></script>-->
