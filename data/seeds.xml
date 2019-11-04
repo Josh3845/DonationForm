@@ -4,10 +4,10 @@
     <moqui.security.ArtifactAuthz userGroupId="ADMIN" authzActionEnumId="AUTHZA_ALL" artifactGroupId="EMPLOYMENT_API" authzTypeEnumId="AUTHZT_ALLOW"/>
 
     <artifactGroups artifactGroupId="EMPLOYMENT_API">
-        <artifacts artifactName="component://DonationForm/screen/DonationForm/application*" artifactTypeEnumId="AT_XML_SCREEN_TRANS" inheritAuthz="Y" nameIsPattern="Y"/>
-        <artifacts artifactName="component://DonationForm/screen/DonationForm/application.xml" artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y" nameIsPattern="N"/>
+        <artifacts artifactName="component://DonationForm/screen/DonationForm/DonationForm*" artifactTypeEnumId="AT_XML_SCREEN_TRANS" inheritAuthz="Y" nameIsPattern="Y"/>
+        <artifacts artifactName="component://DonationForm/screen/DonationForm/DonationForm.xml" artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y" nameIsPattern="N"/>
 
-         <artifacts artifactName="component://DonationForm/screen/DonationForm/application.xml" artifactTypeEnumId="AT_SERVICE" inheritAuthz="Y" nameIsPattern="N"/>
+         <artifacts artifactName="component://DonationForm/screen/DonationForm/DonationForm.xml" artifactTypeEnumId="AT_SERVICE" inheritAuthz="Y" nameIsPattern="N"/>
         
     </artifactGroups>
 

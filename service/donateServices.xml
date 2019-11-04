@@ -8,9 +8,10 @@
         <parameter name="acquireCost" required="false"/>
 
         <!--mantle.party.PartyServices.create#Person-->
-        <parameter name="firstName" required="false"/>
+        <parameter name="firstName" required="true"/>
         <parameter name="middleName" required="false"/>
-        <parameter name="lastName" required="false"/>
+        <parameter name="lastName" required="true"/>
+        
         
         <!--mantle.party.ContactServices.store#PartyContactInfo-->
         <parameter name="emailAddress" required="false"/>
@@ -31,7 +32,7 @@
     </in-parameters>
 
     <out-parameters>
-
+        <parameter name="partyId" />
     </out-parameters>
 
     <actions>
@@ -44,11 +45,9 @@
         
         <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="[partyId:partyId] + context" out-map="context"/> 
 
-        <set name="personName" fromValue="James"/>
-        <set name="personName" from="'James'+ '' +'Dean'"/>
-
+        
         <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="[firstName: personName]"/>
-
+        
         
     </actions>
 </service>

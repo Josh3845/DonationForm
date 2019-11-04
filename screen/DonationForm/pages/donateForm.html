@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
         <link href="/donate.css" rel="stylesheet">
         <!-- <link href="css/main.css" rel="stylesheet">
@@ -25,9 +28,9 @@
             <!--<form-single name="TheForm" transition="TheTransition" method="POST">-->
                     <!-- <form action="/apps/MKSignUp/MKSignUpForm/mksignup" method="post"> -->
 
-                       <!-- action="/app/DonationForm/DonationForm/application" not working-->
+                        <!-- action="/app/DonationForm/DonationForm/donationform"   -->
 
-        <form name="Person" transistion="transition" method="POST">
+        <form method="post">
             <main class="main-content">
                 <div id="payment-form">
                    
@@ -99,20 +102,20 @@
                         <field name="firstName">
                             <div class="row row-flush flex-required">
                                 <div class="field col-9">
-                                    <label for="example2-first_name" class="label-placeholder">First Name<sup>*</sup></label>
-                                    <input id="example2-first_name" name="firstName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
+                                    <label for="firstName" class="label-placeholder">First Name<sup>*</sup></label>
+                                    <input id="firstName" name="firstName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
                                 </div>
                         </field>
                         <field name="middleName">
                                 <div class="field col-3">
-                                    <label for="example2-middle_initial" class="label-placeholder">M.I.<sup></sup></label>
-                                    <input id="example2-middle_initial" name="middleName" size="2" class="input no-placeholder" type="text" placeholder="M.I.">
+                                    <label for="middleName" class="label-placeholder">M.I.<sup></sup></label>
+                                    <input id="middleName" name="middleName" size="2" class="input no-placeholder" type="text" placeholder="M.I.">
                                 </div>
                         </field>
                         <field name="lastName">
                                 <div class="field col-12">
-                                    <label for="example2-last_name" class="label-placeholder">Last Name<sup>*</sup></label>
-                                    <input id="example2-last_name" name="lastName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your Last Name" data-pattern-mismatch="Please re-enter your Last Name" placeholder="Last Name">
+                                    <label for="lastName" class="label-placeholder">Last Name<sup>*</sup></label>
+                                    <input id="lastName" name="lastName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your Last Name" data-pattern-mismatch="Please re-enter your Last Name" placeholder="Last Name">
                                 </div>
                         </field>
                                 <div class="field col-12">
@@ -237,7 +240,7 @@
 
 
                     <button id="submit-button" type="submit">Submit Donation</button>
-                    <!-- <input type="hidden" id="redirectInput" name="redirect"> -->
+                    <input type="hidden" id="redirectInput" name="redirect">
                     <script>
                         $("form").submit(function () {
                         $("#submit-button").text('Thank You').prop('disabled', true);
@@ -254,6 +257,7 @@
             </footer>
             
         </body>
+</html>
 
         <!-- <script src="js/main.js"></script>
             <script src="js/donate.js"></script> -->
