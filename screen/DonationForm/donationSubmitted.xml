@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
 
-    <transition name="donationform" require-session-token="false">
+    <transition name="donationsubmitted" require-session-token="false">
         <service-call name="donateServices.create#Person" in-map="[partyId:partyId] +  context" out-map="context"/>
         <default-response url="."/>
     </transition>
@@ -19,6 +19,6 @@
     </actions>
 
     <widgets>
-    <render-mode><text type="html,vuet" location="component://DonationForm/screen/DonationForm/pages/donateForm.html"/></render-mode>
+    <render-mode><text type="html,vuet" location="component://DonationForm/screen/DonationForm/pages/donationSubmitted.html"/></render-mode>
     </widgets>
 </screen>
