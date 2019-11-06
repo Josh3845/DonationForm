@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <link href="/donate.css" rel="stylesheet">
+        <link href="/donate.css" type="text/css" media="screen" rel="stylesheet">
         <!-- <link href="css/main.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,15 +25,32 @@
                 </div>
             </div>
 
-            <!--<form-single name="TheForm" transition="TheTransition" method="POST">-->
-                    <!-- <form action="/apps/MKSignUp/MKSignUpForm/mksignup" method="post"> -->
+           
 
-                        <!-- action="/app/DonationForm/DonationForm/donationform"   -->
+                        
 
-        <form method="post">
+<!-- 
+                        <form action="/apps/DonationForm/DonationForm/donationform"  method="post">
+                            <div class="label-and-input">
+                                <label for="firstName">First Name</label>
+                                <br/>
+                                <input required type="text" id="firstName" name="firstName">
+                              </div>
+                              <div class="label-and-input">
+                                <label for="lastName">Last Name</label>
+                                <br/>
+                                <input required type="text" id="lastName" name="lastName">
+                              </div>
+                              <button type="submit">Create an MK Account</button>
+                            </form> -->
+                            
+
+
+        <form action="/apps/DonationForm/DonationForm/donationform" method="post">
             <main class="main-content">
                 <div id="payment-form">
-                   
+                  
+
                         <fieldset class="amount">
                             <legend>Donation Amount</legend>
                             <img src="/images/100-secure.png" alt="100% Secure" class="seal">
@@ -99,20 +116,20 @@
                         </fieldset>
                         <fieldset class="contact info">
                             <legend>Contact Information</legend>
-                        <field name="firstName">
+                        <field name="SOMETHING" method="post">
                             <div class="row row-flush flex-required">
                                 <div class="field col-9">
-                                    <label for="firstName" class="label-placeholder">First Name<sup>*</sup></label>
-                                    <input id="firstName" name="firstName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
+                                    <label for="SOMETHING" class="label-placeholder">First Name<sup>*</sup></label>
+                                    <input id="SOMETHING" name="firstName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
                                 </div>
                         </field>
-                        <field name="middleName">
+                        <field name="middleName" method="post">
                                 <div class="field col-3">
                                     <label for="middleName" class="label-placeholder">M.I.<sup></sup></label>
                                     <input id="middleName" name="middleName" size="2" class="input no-placeholder" type="text" placeholder="M.I.">
                                 </div>
                         </field>
-                        <field name="lastName">
+                        <field name="lastName" method="post">
                                 <div class="field col-12">
                                     <label for="lastName" class="label-placeholder">Last Name<sup>*</sup></label>
                                     <input id="lastName" name="lastName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your Last Name" data-pattern-mismatch="Please re-enter your Last Name" placeholder="Last Name">
