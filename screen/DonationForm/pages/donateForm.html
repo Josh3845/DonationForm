@@ -3,8 +3,8 @@
 
 <head>
         <link href="/donate.css" type="text/css" media="screen" rel="stylesheet">
-        <!-- <link href="css/main.css" rel="stylesheet">
-        <link href="index.css" rel="stylesheet"> -->
+        <link href="css/main.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         
@@ -23,30 +23,10 @@
                 <div class="splash-inner donate">
                     <img src="/images/donate.jpg">
                 </div>
-            </div>
-
-           
-
-                        
-
-<!-- 
-                        <form action="/apps/DonationForm/DonationForm/donationform"  method="post">
-                            <div class="label-and-input">
-                                <label for="firstName">First Name</label>
-                                <br/>
-                                <input required type="text" id="firstName" name="firstName">
-                              </div>
-                              <div class="label-and-input">
-                                <label for="lastName">Last Name</label>
-                                <br/>
-                                <input required type="text" id="lastName" name="lastName">
-                              </div>
-                              <button type="submit">Create an MK Account</button>
-                            </form> -->
-                            
+            </div>                           
 
 
-        <form action="/apps/DonationForm/DonationForm/donationform" method="post">
+        <form id= "/apps/DonationForm/DonationForm/donationform" name="/apps/DonationForm/DonationForm/donationform" action="/apps/DonationForm/DonationForm/donationform" method="post">
             <main class="main-content">
                 <div id="payment-form">
                   
@@ -54,46 +34,47 @@
                         <fieldset class="amount">
                             <legend>Donation Amount</legend>
                             <img src="/images/100-secure.png" alt="100% Secure" class="seal">
+                            
                             <div class="no-padding amount-radios row row-flush">
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-1" value="31" checked="checked" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-1" value="31.00" checked="checked" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-1">$31&nbsp;&nbsp;</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-2" value="51" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-2" value="51.00" checked="checked" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-2">$51&nbsp;&nbsp;</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-3" value="101" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-3" value="101.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-3">$101&nbsp;</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-4" value="251" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-4" value="251.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-4">$251&nbsp;</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-5" value="501" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-5" value="501.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-5">$501&nbsp;</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-6" value="1001" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-6" value="1001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-6">$1,001&nbsp;</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-7" value="2001" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-7" value="2001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-7">$2,001</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-8" value="3001" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-8" value="3001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-8">$3,001</label>
                                 </div>
-                                <div class="donatealign" class="radio col-3 col-md-2">
-                                    <input type="radio" name="acquirecost" id="rdo-amount-9" value="5001" onchange="clearOtherAmount()">
+                                <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-9" value="5001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-9">$5,001</label>
                                 </div>
                                 <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
                                     <span class="other-radio-and-label">
-                                        <input type="radio" name="acquireCost" id="rdo-amount-other" value>
+                                        <input type="radio" name="amount" id="rdo-amount-other" value>
                                         <label for="rdo-amount-other">$</label>
                                     </span>
                                     <input id="amount" class="other-input input" name="amount" type="tel" size="7" maxlength="7" pattern="\d+(\.\d{2})?" placeholder="other" onclick="selectOtherRadioButton()" data-value-missing="Please enter the amount you would like to give" data-pattern-mismatch="Please enter only number of dollars OR dollars and cents">
@@ -114,6 +95,7 @@
                                 </div>
                             </div>
                         </fieldset>
+                        
                         <fieldset class="contact info">
                             <legend>Contact Information</legend>
                         <field name="SOMETHING" method="post">
@@ -137,7 +119,7 @@
                         </field>
                                 <div class="field col-12">
                                     <label for="email" class="label-placeholder">Email Address<sup>*</sup></label>
-                                    <input id="email" name="email" size="30" class="input no-placeholder" type="emailAddress" required data-value-missing="Please enter your Email Address" data-pattern-mismatch="Please enter a valid Email Address" placeholder="Email Address">
+                                    <input id="email" name="emailAddress" size="30" class="input no-placeholder" type="email" required data-value-missing="Please enter your Email Address" data-pattern-mismatch="Please enter a valid Email Address" placeholder="Email Address">
                                 </div>
                                 <div class="field col-12">
                                     <label for="phone" class="label-placeholder">Phone Number<sup>*</sup></label>
@@ -241,7 +223,7 @@
                             <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardNumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Card number" aria-placeholder="Card number" aria-invalid="false" value="">
                             <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
                                 <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="expireDate" inputmode="numeric" aria-label="Credit or debit card number" placeholder="exp 10/20" aria-placeholder="Card number" aria-invalid="false" value="">
-                                <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                                <span class="InputContainer" data-max="4242">
                                     <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardSecurityCode" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Security Code" aria-placeholder="Card number" aria-invalid="false" value="">
                                     <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
                                     </div>
@@ -274,7 +256,9 @@
             </footer>
             
         </body>
+
+        <script src="js/main.js"></script>
+            <script src="js/donate.js"></script>
 </html>
 
-        <!-- <script src="js/main.js"></script>
-            <script src="js/donate.js"></script> -->
+        
