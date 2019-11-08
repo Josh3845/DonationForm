@@ -7,6 +7,16 @@
     <transition name="donationform" require-session-token="false">
         <service-call name="donateServices.create#Person" in-map="[partyId:partyId] +  context" out-map="context"/>
         <default-response url="."/>
+
+        <!-- <actions>
+            <entity-find entity-name="Person" list="PartyContactInfo">
+            <econdition field-name="" from=""/>
+            <order-by field-name="partyId"/>
+            </entity-find>
+            <script>ec.web.sendJsonResponse([exampleTypeEnumList:exampleTypeEnumList])</script>
+        </actions>
+        <default-response type="none"/> -->
+
     </transition>
 
 

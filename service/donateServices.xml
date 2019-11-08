@@ -5,8 +5,8 @@
 <service verb="create" noun="Person">
     <in-parameters>
     
-         <!--<mantle.product.AssetServices.create#ProductAssetAdHoc--> 
-        <!-- <parameter name="acquireCost" required="false"/> -->
+         <!--mantle.account.PaymentServices.create#Payment--> 
+        <!-- <parameter name="amount" required="false"/> -->
 
         <!--mantle.party.PartyServices.create#Person-->
         <parameter name="firstName" required="true" allow-html="safe"/>
@@ -27,9 +27,9 @@
         <parameter name="postalCode" required="false"/>
         
         <!--mantle.account.PaymentMethodServices.create#CreditCard-->
-        <!-- <parameter name="cardNumber" required="false"/>
+        <parameter name="cardNumber" required="false"/>
         <parameter name="expireDate" required="false"/>
-        <parameter name="cardSecurityCode" required="false"/> -->
+        <parameter name="cardSecurityCode" required="false"/>
         
 
 
@@ -40,15 +40,22 @@
     </out-parameters>
 
     <actions>
+    
+        <!-- <service-call name="mantle.account.PaymentServices.create#Payment" in-map="context" out-map="context"/>
+        <set field="fromPartyId" from="partyId" />
+        <set field="toPartyId" default-value="testing"/> -->
        
          <service-call name="mantle.party.PartyServices.create#Person" in-map="[partyId:partyId] + context" out-map="context"/>
        
-        <service-call name="mantle.party.ContactServices.store#PartyContactInfo" in-map="[partyId:partyId] + context" out-map="context"/>
+        <service-call name="mantle.party.ContactServices.store#PartyContactInfo" in-map="context" out-map="context"/>
 
-        <!-- <service-call name="mantle.account.PaymentMethodServices.create#CreditCard" in-map="[partyId:partyId] + context" out-map="context"/>
+        <service-call name="mantle.account.PaymentMethodServices.create#CreditCard" in-map="context" out-map="context"/>
+
+       
         
-        <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="[partyId:partyId] + context" out-map="context"/>  -->
+        <!-- <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="context" out-map="context"/>  -->
 
+        <!-- <service-call name="Stripe.StripePaymentServices.authorizeAndCapture#Payment" in-map="context" out-map="context"/> -->
         
         <!-- <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="[firstName: personName]"/> -->
         
