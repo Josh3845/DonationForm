@@ -37,7 +37,7 @@
                             <img src="/images/100-secure.png" alt="100% Secure" class="seal">
                             
                             <div class="no-padding amount-radios row row-flush">
-                                <div class="radio col-3 col-md-2">
+                                <#--  <div class="radio col-3 col-md-2">
                                     <input type="radio" name="amount" id="rdo-amount-1" value="31.00" checked="checked" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-1">$31&nbsp;&nbsp;</label>
                                 </div>
@@ -46,8 +46,8 @@
                                     <label for="rdo-amount-1">$31&nbsp;&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
-                                    <input required type="radio" name="amount" id="testing" value="51.00" onchange="clearOtherAmount()">
-                                    <label for="testing">$51&nbsp;&nbsp;</label>
+                                    <input required type="radio" name="amount" id="amount" value="51" onchange="clearOtherAmount()">
+                                    <label for="amount">$51&nbsp;&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
                                     <input type="radio" name="amount" id="rdo-amount-3" value="101" onchange="clearOtherAmount()">
@@ -76,14 +76,18 @@
                                 <div class="radio col-3 col-md-2">
                                     <input type="radio" name="amount" id="rdo-amount-9" value="5001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-9">$5,001</label>
+                                </div>  -->
+                                <div onclick="selectOtherRadioButton">
+                                <label for="amount">Amount*</label>
+                                <input required type="text" onchange="clearOtherAmount()"id="amount" name="amount" pattern="^(\d*\.)?\d+$" title="50.00">
                                 </div>
-                                <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
+                                <#--  <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
                                     <span class="other-radio-and-label">
                                         <input type="radio" name="amount" id="rdo-amount-other" value="">
                                         <label for="rdo-amount-other">$</label>
                                     </span>
                                     <input id="amount" class="other-input input" name="amount"   placeholder="other" onclick="selectOtherRadioButton()" data-value-missing="Please enter the amount you would like to give" data-pattern-mismatch="Please enter only number of dollars OR dollars and cents">
-                                </div>
+                                </div>  -->
                             </div>
                         
                             <legend style="padding-left: 14px;">Frequency</legend>
@@ -224,9 +228,9 @@
             <fieldset class="card info">
                 <legend>Card Information</legend>
                     <div id="card-one-liner" class="stripe-input-wrapper">
-                        <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                        <span class="InputContainer" data-max="4242 4242 4242 4242 4242">
                             <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardNumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Card number" aria-placeholder="Card number" aria-invalid="false" value="">
-                            <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                            <span class="InputContainer" data-max="4242 4242 4242 4242 4242">
                                 <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="expireDate" inputmode="numeric" aria-label="Credit or debit card number" placeholder="exp 10/20" aria-placeholder="Card number" aria-invalid="false" value="">
                                 <span class="InputContainer" data-max="4242">
                                     <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardSecurityCode" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Security Code" aria-placeholder="Card number" aria-invalid="false" value="">

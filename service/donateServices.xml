@@ -2,11 +2,11 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-2.1.xsd">
 
 
-<service verb="create" noun="Person">
+<service verb="create" noun="Person" authenticate="annonymous-all">
     <in-parameters>
     
          <!--mantle.account.PaymentServices.create#Payment--> 
-        <parameter name="amount" required="false"/>
+        <parameter name="amount" required="true"/>
 
         <!--mantle.party.PartyServices.create#Person-->
         <parameter name="firstName" required="false"/>
@@ -37,13 +37,12 @@
 
     <out-parameters>
         <parameter name="partyId" />
+        <parameter name="paymentMethodId"/>
     </out-parameters>
 
     <actions>
     
-        <service-call name="mantle.account.PaymentServices.create#Payment" in-map="context" out-map="context"/>
-        <set field="fromPartyId" from="partyId" />
-        <set field="toPartyId" default-value="testing"/>
+        
        
          <service-call name="mantle.party.PartyServices.create#Person" in-map="[partyId:partyId] + context" out-map="context"/>
        
@@ -51,6 +50,10 @@
 
         <service-call name="mantle.account.PaymentMethodServices.create#CreditCard" in-map="context" out-map="context"/>
 
+        <set field="fromPartyId" from="partyId" />
+        <set field="toPartyId" default-value="DefaultSettings"/>
+        <service-call name="mantle.account.PaymentServices.create#Payment" in-map="context" out-map="context"/>
+       
        
         
         <!-- <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="context" out-map="context"/>  -->
