@@ -6,6 +6,7 @@
         <link href="css/main.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         
         
     
@@ -26,7 +27,7 @@
             </div>                           
 
 
-        <form id= "/apps/DonationForm/DonationForm/donationform" name="/apps/DonationForm/DonationForm/donationform" action="/apps/DonationForm/DonationForm/donationform" method="post">
+        <form action="/apps/DonationForm/DonationForm/donationform" method="post">
             <main class="main-content">
                 <div id="payment-form">
                   
@@ -36,25 +37,29 @@
                             <img src="/images/100-secure.png" alt="100% Secure" class="seal">
                             
                             <div class="no-padding amount-radios row row-flush">
+                                <#--  <div class="radio col-3 col-md-2">
+                                    <input type="radio" name="amount" id="rdo-amount-1" value="31.00" checked="checked" onchange="clearOtherAmount()">
+                                    <label for="rdo-amount-1">$31&nbsp;&nbsp;</label>
+                                </div>
                                 <div class="radio col-3 col-md-2">
                                     <input type="radio" name="amount" id="rdo-amount-1" value="31.00" checked="checked" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-1">$31&nbsp;&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
-                                    <input type="radio" name="amount" id="rdo-amount-2" value="51.00" checked="checked" onchange="clearOtherAmount()">
-                                    <label for="rdo-amount-2">$51&nbsp;&nbsp;</label>
+                                    <input required type="radio" name="amount" id="amount" value="51" onchange="clearOtherAmount()">
+                                    <label for="amount">$51&nbsp;&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
-                                    <input type="radio" name="amount" id="rdo-amount-3" value="101.00" onchange="clearOtherAmount()">
+                                    <input type="radio" name="amount" id="rdo-amount-3" value="101" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-3">$101&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
-                                    <input type="radio" name="amount" id="rdo-amount-4" value="251.00" onchange="clearOtherAmount()">
+                                    <input type="radio" name="amount" id="rdo-amount-4" value="251" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-4">$251&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
-                                    <input type="radio" name="amount" id="rdo-amount-5" value="501.00" onchange="clearOtherAmount()">
-                                    <label for="rdo-amount-5">$501&nbsp;</label>
+                                    <input type="radio" name="amount" id="amount" value="501.00" onchange="clearOtherAmount()">
+                                    <label for="amount">$501&nbsp;</label>
                                 </div>
                                 <div class="radio col-3 col-md-2">
                                     <input type="radio" name="amount" id="rdo-amount-6" value="1001.00" onchange="clearOtherAmount()">
@@ -71,14 +76,18 @@
                                 <div class="radio col-3 col-md-2">
                                     <input type="radio" name="amount" id="rdo-amount-9" value="5001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-9">$5,001</label>
+                                </div>  -->
+                                <div onclick="selectOtherRadioButton">
+                                <label for="amount">Amount*</label>
+                                <input required type="text" onchange="clearOtherAmount()"id="amount" name="amount" pattern="^(\d*\.)?\d+$" title="50.00">
                                 </div>
-                                <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
+                                <#--  <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
                                     <span class="other-radio-and-label">
-                                        <input type="radio" name="amount" id="rdo-amount-other" value>
+                                        <input type="radio" name="amount" id="rdo-amount-other" value="">
                                         <label for="rdo-amount-other">$</label>
                                     </span>
-                                    <input id="amount" class="other-input input" name="amount" type="tel" size="7" maxlength="7" pattern="\d+(\.\d{2})?" placeholder="other" onclick="selectOtherRadioButton()" data-value-missing="Please enter the amount you would like to give" data-pattern-mismatch="Please enter only number of dollars OR dollars and cents">
-                                </div>
+                                    <input id="amount" class="other-input input" name="amount"   placeholder="other" onclick="selectOtherRadioButton()" data-value-missing="Please enter the amount you would like to give" data-pattern-mismatch="Please enter only number of dollars OR dollars and cents">
+                                </div>  -->
                             </div>
                         
                             <legend style="padding-left: 14px;">Frequency</legend>
@@ -98,25 +107,25 @@
                         
                         <fieldset class="contact info">
                             <legend>Contact Information</legend>
-                        <field name="SOMETHING" method="post">
+                        <fieldset name="SOMETHING">
                             <div class="row row-flush flex-required">
                                 <div class="field col-9">
                                     <label for="SOMETHING" class="label-placeholder">First Name<sup>*</sup></label>
                                     <input id="SOMETHING" name="firstName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your First Name" data-pattern-mismatch="Please re-enter your First Name" placeholder="First Name">
                                 </div>
-                        </field>
-                        <field name="middleName" method="post">
+                        </fieldset>
+                        <fieldset name="middleName">
                                 <div class="field col-3">
                                     <label for="middleName" class="label-placeholder">M.I.<sup></sup></label>
                                     <input id="middleName" name="middleName" size="2" class="input no-placeholder" type="text" placeholder="M.I.">
                                 </div>
-                        </field>
-                        <field name="lastName" method="post">
+                        </fieldset>
+                        <fieldset name="lastName">
                                 <div class="field col-12">
                                     <label for="lastName" class="label-placeholder">Last Name<sup>*</sup></label>
                                     <input id="lastName" name="lastName" class="input no-placeholder" type="text" pattern=".{2,}" required data-value-missing="Please enter your Last Name" data-pattern-mismatch="Please re-enter your Last Name" placeholder="Last Name">
                                 </div>
-                        </field>
+                        </fieldset>
                                 <div class="field col-12">
                                     <label for="email" class="label-placeholder">Email Address<sup>*</sup></label>
                                     <input id="email" name="emailAddress" size="30" class="input no-placeholder" type="email" required data-value-missing="Please enter your Email Address" data-pattern-mismatch="Please enter a valid Email Address" placeholder="Email Address">
@@ -219,9 +228,9 @@
             <fieldset class="card info">
                 <legend>Card Information</legend>
                     <div id="card-one-liner" class="stripe-input-wrapper">
-                        <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                        <span class="InputContainer" data-max="4242 4242 4242 4242 4242">
                             <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardNumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Card number" aria-placeholder="Card number" aria-invalid="false" value="">
-                            <span class="InputContainer" data-max="4242 4242 4242 4242 4240">
+                            <span class="InputContainer" data-max="4242 4242 4242 4242 4242">
                                 <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="expireDate" inputmode="numeric" aria-label="Credit or debit card number" placeholder="exp 10/20" aria-placeholder="Card number" aria-invalid="false" value="">
                                 <span class="InputContainer" data-max="4242">
                                     <input class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardSecurityCode" inputmode="numeric" aria-label="Credit or debit card number" placeholder="Security Code" aria-placeholder="Card number" aria-invalid="false" value="">

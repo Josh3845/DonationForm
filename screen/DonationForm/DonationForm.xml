@@ -29,6 +29,6 @@
     </actions>
 
     <widgets>
-    <render-mode><text type="html,vuet" location="component://DonationForm/screen/DonationForm/pages/donateForm.html"/></render-mode>
+    <render-mode><text type="html,vuet" location="component://DonationForm/screen/DonationForm/pages/donateForm.html.ftl"/></render-mode>
     </widgets>
 </screen>
