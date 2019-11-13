@@ -38,6 +38,7 @@
     <out-parameters>
         <parameter name="partyId" />
         <parameter name="paymentMethodId"/>
+        <parameter name="paymentGatewayConfigId"/>
     </out-parameters>
 
     <actions>
@@ -56,11 +57,14 @@
        
        
         
-        <!-- <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="context" out-map="context"/>  -->
+       <entity-make-value entity-name="mantle.account.payment.Payment" value-field="payment"/>
+        <!-- <set field="paymentId" from="payment.paymentId"/> -->
+        <set field="paymentGatewayConfigId" value="StripeDemo"/>
 
-        <!-- <service-call name="Stripe.StripePaymentServices.authorizeAndCapture#Payment" in-map="context" out-map="context"/> -->
+        <log message="---------------${context}---------------------------"/>
+        <service-call name="Stripe.StripePaymentServices.authorizeAndCapture#Payment" in-map="context" out-map="context"/>
         
-        <!-- <service-call name="mantle.product.AssetServices.create#ProductAssetAdHoc" in-map="[firstName: personName]"/> -->
+        
         
         
     </actions>
