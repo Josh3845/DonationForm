@@ -79,7 +79,7 @@
                                 </div>  -->
                                 <div onclick="selectOtherRadioButton">
                                 <label for="amount">Amount*</label>
-                                <input required type="text" onchange="clearOtherAmount()"id="amount" name="amount" pattern="^(\d*\.)?\d+$" title="50.00">
+                                <input required type="text" onchange="clearOtherAmount()"id="amount" name="amount" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$">
                                 </div>
                                 <#--  <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
                                     <span class="other-radio-and-label">
@@ -225,6 +225,16 @@
                             </label>
                         </fieldset>
 
+                <#--  <fieldset class="credit-card-group">    ALTERNATIVE CC INPUT
+                    <legend>Credit Card Information</legend>
+                    <label for="card-number">Credit Card Number</label>
+                    <input placeholder="1234 5678 9012 3456" pattern="[0-9]*" type="text" class="card-number" id="card-number">
+                    <label for="card-number">Expiration Date</label>
+                    <input placeholder="MM/YY" pattern="[0-9]*" type="text" class="card-expiration" id="card-expiration">
+                    <label for="card-number">CVV Number</label>
+                    <input placeholder="CVV" pattern="[0-9]*" type="text" class="card-cvv" id="card-cvv">
+               </fieldset>  -->
+
             <fieldset class="card info">
                 <legend>Card Information</legend>
                     <div id="card-one-liner" class="stripe-input-wrapper">
@@ -266,8 +276,8 @@
             
         </body>
 
-        <script src="js/main.js"></script>
-            <script src="js/donate.js"></script>
+        <#--  <script src="js/main.js"></script>
+            <script src="js/donate.js"></script>  -->
 </html>
 
         

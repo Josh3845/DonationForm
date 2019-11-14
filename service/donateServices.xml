@@ -38,12 +38,12 @@
     <out-parameters>
         <parameter name="partyId" />
         <parameter name="paymentMethodId"/>
-        <parameter name="paymentGatewayConfigId"/>
+        <!-- <parameter name="paymentGatewayConfigId"/> -->
     </out-parameters>
 
     <actions>
-    
-        
+        <!-- need to create 2 data fields for this to work on for expire month and the other for expire year. -->
+        <set field="expireDate" from="expireMonth + '/' + expireYear"/>  
        
          <service-call name="mantle.party.PartyServices.create#Person" in-map="[partyId:partyId] + context" out-map="context"/>
        
