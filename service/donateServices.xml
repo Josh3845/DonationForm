@@ -28,7 +28,8 @@
         
         <!--mantle.account.PaymentMethodServices.create#CreditCard-->
         <parameter name="cardNumber" required="false"/>
-        <parameter name="expireDate" required="false"/>
+        <parameter name="expireMonth" required="false"/>
+        <parameter name="expireYear" required="false"/>
         <parameter name="cardSecurityCode" required="false"/>
         
 
@@ -48,7 +49,9 @@
          <service-call name="mantle.party.PartyServices.create#Person" in-map="[partyId:partyId] + context" out-map="context"/>
        
         <service-call name="mantle.party.ContactServices.store#PartyContactInfo" in-map="context" out-map="context"/>
-
+        <set field="firstNameOnAccount" from="firstName"/>
+        <set field="lastNameOnAccount" from="lastName"/>
+        
         <service-call name="mantle.account.PaymentMethodServices.create#CreditCard" in-map="context" out-map="context"/>
 
         <set field="fromPartyId" from="partyId" />
