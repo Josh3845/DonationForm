@@ -1,5 +1,9 @@
 /* media queries to match Bootstrap / Shoelace grid options for sm, md, lg, and xl */
 
+.hover:active {
+	background-color: #F00;
+  }
+
 body.donate {
 	background: #e1e1e1;
     padding-top: 0;
@@ -173,11 +177,11 @@ fieldset .row {
 }
 
 
-input[type='radio'] { transform: scale(2); }
+/* input[type='radio'] { transform: scale(2); }
 
 [type='radio'] {
     display: none;
-}
+} */
 
 fieldset img.seal {
 	position: absolute;

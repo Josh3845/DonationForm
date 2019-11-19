@@ -1,3 +1,15 @@
+
+$(document).ready(function () {
+	$('button').on('click', function() {
+    $('button').removeClass('active');
+    $(this).addClass('active');
+  });
+});
+function buttonA_clickHandler(event) {
+    document.getElementById('hiddenId').value = whatever;
+    document.getElementById('theForm').submit();
+}
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

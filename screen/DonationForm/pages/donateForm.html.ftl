@@ -7,9 +7,9 @@
         <link href="index.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link href="js/donate.js">
         
-        
-    
+           
     </head>
     <body class="donate">
             <header class="header">
@@ -77,10 +77,23 @@
                                     <input type="radio" name="amount" id="rdo-amount-9" value="5001.00" onchange="clearOtherAmount()">
                                     <label for="rdo-amount-9">$5,001</label>
                                 </div>  -->
-                                <div onclick="selectOtherRadioButton">
+
+                                <#--  <div onclick="selectOtherRadioButton"> working with stripe
                                 <label for="amount">Amount*</label>
-                                <input required type="text" onchange="clearOtherAmount()"id="amount" name="amount" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$">
+                                <input required type="text" onchange="clearOtherAmount()"id="amount" name="amount" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$">  -->
+                                <div>
+                                <input type="radio" id="hover" value="3100" name="amount" class="hover">
+                                <label for="hover">$31</label>
                                 </div>
+
+                                <input type="radio" id="hover-1" name="amount" value="5100" class="btn btn-default">
+                                <label for="hover-1">$51</label>
+                                <input type="radio" id="hover-2"value="7100" name="amount" class="btn btn-default">
+                                <label for="hover-2">$71</label>
+
+                            </div>
+                                <#--  <div>  -->
+                                
                                 <#--  <div class="radio other-amount-wrapper col-3" onclick="selectOtherRadioButton()">
                                     <span class="other-radio-and-label">
                                         <input type="radio" name="amount" id="rdo-amount-other" value="">
@@ -88,7 +101,7 @@
                                     </span>
                                     <input id="amount" class="other-input input" name="amount"   placeholder="other" onclick="selectOtherRadioButton()" data-value-missing="Please enter the amount you would like to give" data-pattern-mismatch="Please enter only number of dollars OR dollars and cents">
                                 </div>  -->
-                            </div>
+                            <#--  </div>  -->
                         
                             <legend style="padding-left: 14px;">Frequency</legend>
                             <div>   
@@ -278,8 +291,8 @@
             
         </body>
 
-        <#--  <script src="js/main.js"></script>
-            <script src="js/donate.js"></script>  -->
+        <#--  <script src="js/main.js"></script>  -->
+            
 </html>
 
         
